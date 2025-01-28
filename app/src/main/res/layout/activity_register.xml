@@ -5,6 +5,185 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register">
+    tools:context=".logins.Login">
+
+
+    <ImageView
+        android:id="@+id/opFoto"
+        android:layout_width="151dp"
+        android:layout_height="126dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.054"
+        app:srcCompat="@drawable/perfilsinfoto" />
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="232dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="472dp"
+        android:ems="10"
+        android:hint="name"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.128" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="235dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName"
+        app:layout_constraintVertical_bias="0.102" />
+
+    <EditText
+        android:id="@+id/repeatPassword"
+        android:layout_width="235dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:hint="repeat password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintVertical_bias="0.135" />
+
+    <Button
+        android:id="@+id/botonLogin"
+        android:layout_width="147dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="128dp"
+        android:text="Sign in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/repeatPassword"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <EditText
+        android:id="@+id/fecha"
+        android:layout_width="234dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Fecha de nacimiento"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repeatPassword"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <CheckBox
+        android:id="@+id/condiciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aceptar las condiciones"
+        app:layout_constraintBottom_toTopOf="@+id/botonLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.385"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fecha"
+        app:layout_constraintVertical_bias="0.675" />
+
+    <TextView
+        android:id="@+id/errorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="El nombre debe tener de 4 a 10 caracteres"
+        android:textColor="#FD0000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/userName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/errorPw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="La contraseña debe tener de 4 a 10 caracteres y al menos 1 número"
+        android:textColor="#FD0000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/errorPw2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Las contraseñas no coinciden"
+        android:textColor="#FD0000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/repeatPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/errorDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Debes tener al menos 16 años"
+        android:textColor="#FD0000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/fecha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repeatPassword"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/errorCond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acepta las condiciones para continuar"
+        android:textColor="#FD0000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/condiciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fecha"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="166dp"
+        android:layout_marginBottom="24dp"
+        android:text="Toca en el icono para seleccionar la foto"
+        app:layout_constraintBottom_toTopOf="@+id/userName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

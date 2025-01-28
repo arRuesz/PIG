@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondohub"
+    tools:context=".firebase.BuscarAlumnoActivity">
+
+    <ImageView
+        android:id="@+id/imageViewProfile"
+        android:layout_width="109dp"
+        android:layout_height="103dp"
+        android:layout_margin="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tVUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Nombre de usuario"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/imageViewProfile"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="264dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="156dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbNIF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NIF"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/rbNIA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NIA"
+            android:textColor="#FFFFFF" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/tfNIF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="300dp"
+        android:ems="10"
+        android:hint="Introduce el NIF"
+        android:inputType="text"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/tfNIA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="381dp"
+        android:ems="10"
+        android:hint="Introduce el NIA"
+        android:inputType="text"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="302dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="498dp"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bBuscarNIF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="616dp"
+        android:text="Buscar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/bBuscarNIA"
+        android:layout_width="95dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="616dp"
+        android:text="Buscar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

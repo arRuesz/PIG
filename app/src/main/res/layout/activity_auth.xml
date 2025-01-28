@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondohub">
+
+    <ImageView
+        android:id="@+id/imageViewProfile"
+        android:layout_width="109dp"
+        android:layout_height="103dp"
+        android:layout_margin="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tVUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Usuario no autenticado"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/imageViewProfile"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/formLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/tVUsername">
+
+        <EditText
+            android:id="@+id/tfNIA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="NIA"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/tfNIF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="NIF"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/tfNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/tfApellido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Apellido"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/tfMediaExpediente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Media Expediente"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="68dp"
+        android:text="Iniciar sesión con Google"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

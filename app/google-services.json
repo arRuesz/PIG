@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "478111736465",
+    "project_id": "dam2arr-df65e",
+    "storage_bucket": "dam2arr-df65e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478111736465:android:334f4021d49f6c50299530",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478111736465-emcqnd0d21tbqbjo0e8tto5hraaffac6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX3DIWxqzdy8kN0zMK0AOEcZuGuQbDlQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478111736465-emcqnd0d21tbqbjo0e8tto5hraaffac6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
