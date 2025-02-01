@@ -8,6 +8,8 @@ import com.example.myapplication.logins.AppDatabase
 import com.example.myapplication.databinding.ActivityHubBinding
 import com.example.myapplication.firebase.FirebaseActivity
 import com.example.myapplication.juegopig.MainActivity
+import com.example.myapplication.multimedia.PreCam
+import com.example.myapplication.multimedia.VideoPlayerActivity
 import com.squareup.picasso.Picasso
 
 class Hub : AppCompatActivity() {
@@ -17,12 +19,12 @@ class Hub : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHubBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val fotoPig = binding.fotoPig
-        fotoPig.setOnClickListener {
+
+        binding.fotoPig.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-        selectPhoto()
+
         binding.imagenChuck.setOnClickListener { goToChuck() }
         binding.fotoFirebase.setOnClickListener {
             val username = intent.getStringExtra("name")
@@ -30,12 +32,17 @@ class Hub : AppCompatActivity() {
             intent.putExtra("username", username)
             startActivity(intent)
         }
+
+        binding.fotoCamara.setOnClickListener { goToCamera() }
+        selectPhoto()
+
+        binding.videoPlayer.setOnClickListener{goToPlayer()}
     }
 
     private fun selectPhoto() {
+        val username = intent.getStringExtra("name")
         Thread {
             val userDao = AppDatabase.getInstance(this).userDao()
-            val username = intent.getStringExtra("name")
             val picUrl = username?.let { userDao.getUrl(it) }
             runOnUiThread {
                 if (!picUrl.isNullOrEmpty()) {
@@ -50,6 +57,20 @@ class Hub : AppCompatActivity() {
 
     private fun goToChuck() {
         val intent = Intent(this@Hub, Chuckmemes::class.java)
+        startActivity(intent)
+    }
+
+    private fun goToCamera() {
+        val username = intent.getStringExtra("name")
+        val intent = Intent(this@Hub, PreCam::class.java)
+        intent.putExtra("username", username)
+        startActivity(intent)
+    }
+
+    private fun goToPlayer(){
+        val username = intent.getStringExtra("name")
+        val intent = Intent(this@Hub,VideoPlayerActivity::class.java)
+        intent.putExtra("username", username)
         startActivity(intent)
     }
 }
