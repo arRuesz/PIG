@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btnPlayAudio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reproducir Audio 1" />
+
+    <Button
+        android:id="@+id/btnPlayAudio2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reproducir Audio 2" />
+
+    <Button
+        android:id="@+id/btnPlayAudio3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reproducir Audio 3" />
+
+    <Button
+        android:id="@+id/btnSpeedUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acelerar" />
+
+    <Button
+        android:id="@+id/btnSpeedDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ralentizar" />
+
+    <Button
+        android:id="@+id/btnEqualizer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eco" />
+
+    <Button
+        android:id="@+id/btnReverb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distorsionar" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detener" />
+
+</LinearLayout>

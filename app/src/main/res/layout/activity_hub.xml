@@ -105,5 +105,82 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.837" />
 
+    <Button
+        android:id="@+id/btnMute"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:text="Parar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.943"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <ImageView
+        android:id="@+id/soundApp"
+        android:layout_width="85dp"
+        android:layout_height="84dp"
+        android:src="@drawable/iconosound"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.806"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.837" />
+
+    <ImageView
+        android:id="@+id/cupImg"
+        android:layout_width="54dp"
+        android:layout_height="51dp"
+        android:src="@drawable/cup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationCup"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/cupImg"
+        app:layout_constraintEnd_toEndOf="@id/cupImg"
+        app:layout_constraintStart_toStartOf="@id/cupImg"
+        app:layout_constraintTop_toTopOf="@id/cupImg"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/cupani" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationPausePlay"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/pauseani" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationClick"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.873"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/clickani" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
